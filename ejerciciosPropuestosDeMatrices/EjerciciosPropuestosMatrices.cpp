@@ -7,7 +7,7 @@ using namespace std;
 void matrizTranspuesta(){
 	int inicial[2][2] = {};
 	
-	//¿Como puedo retornar una matriz desde una función, pendiente.
+	//Â¿Como puedo retornar una matriz desde una funciÃ³n, pendiente.
 	for(int i = 0; i < 2; i++){
 		for(int j = 0; j < 2; j++){
 			//cout << "Ingresa un numero: ";
@@ -53,7 +53,7 @@ void determinante(){
 	sarrus = (inicial[0][0] * inicial[1][1] *  inicial[2][2]) + (inicial[0][1] * inicial[1][2] * inicial [2][0]) + (inicial[0][2] * inicial[1][0] * inicial[2][1])
 	- (inicial[0][2] * inicial[1][1] * inicial[2][0]) - (inicial[0][0] * inicial[1][2] * inicial[2][1]) - (inicial[0][1] * inicial[1][0] * inicial[2][2]);
 	cout << "\nEl determinante es: " << sarrus;
-	//Forma de automatizar el método de Sarrus
+	//Forma de automatizar el mÃ©todo de Sarrus
 }
 
 void matrizAdjunta(){
@@ -203,7 +203,7 @@ void metodoGauss(){
 	}
 	
 	
-	//Comprobar cuál es el número más pequeño de la primera columna y colocarlos del más pequeño al más grande
+	//Comprobar cuÃ¡l es el nÃºmero mÃ¡s pequeÃ±o de la primera columna y colocarlos del mÃ¡s pequeÃ±o al mÃ¡s grande
 	for (int i = 0; i < 2; i++) {
         for (int j = 0; j < 2; j++) {
             if (inicial[j][0] > inicial [j+1][0] && inicial[j][0] != 0) {
@@ -234,16 +234,16 @@ void metodoGauss(){
 		}
 	}
 	
-	//Encontramos la formula el número para dejar en 0 la posicion 1,0
+	//Encontramos la formula el nÃºmero para dejar en 0 la posicion 1,0
 	f = inicial[1][0] / inicial[0][0];
-	//cout << "El número multiplicador es: " << f;
+	//cout << "El nÃºmero multiplicador es: " << f;
 	
 	//Ahora con ese numero hacemos los calculos para variar la fila 1
 	for(int i = 0; i < 4; i++){
 		inicial[1][i] = inicial[1][i] - (f * inicial[0][i]);
 	}
 	
-	//Encontramos la formula para el número que deja en 0 la posicion 2,0
+	//Encontramos la formula para el nÃºmero que deja en 0 la posicion 2,0
 	f = inicial[2][0] / inicial[0][0];
 	
 	//Ahora con ese numero hacemos los calculos para variar la fila 2
@@ -251,7 +251,7 @@ void metodoGauss(){
 		inicial[2][i] = inicial[2][i] - (f * inicial[0][i]);
 	}
 	
-	//Encontramos la formula para el número que deja en 0 la posicion 2,1
+	//Encontramos la formula para el nÃºmero que deja en 0 la posicion 2,1
 	f = inicial[2][1] / inicial[1][1];
 	
 	//Ahora con ese numero hacemos los calculos para variar la fila 2
@@ -292,7 +292,7 @@ void metodoGauss(){
 	for(int i = 0; i < 3; i++){
 		cout << (guardar[i][0] * x) + (guardar[i][1] * y) + (guardar[i][2] * z) << endl;
 	}
-	/*Para comprobar si los resultados son similares a la última columna
+	/*Para comprobar si los resultados son similares a la Ãºltima columna
 	cout << "La segunda suma es " << (inicial[1][1] * y) + (inicial[1][2] * z) << endl;
 	cout <<"La suma es " << (inicial[0][0] * x) + (inicial[0][1] * y) + (inicial[0][2] * z) << endl;*/
 }
